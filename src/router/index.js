@@ -1,10 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Albums from '../views/Albums';
-import Photos from '../views/Photos';
-import Photographs from '../views/Photographs';
-import Photograph from '../views/Photograph';
 
 Vue.use(VueRouter);
 
@@ -13,6 +9,9 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+    meta: {
+      title: 'Главная',
+    },
   },
   {
     path: '/about',
@@ -22,30 +21,53 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    meta: {
+      title: 'О себе',
+    },
   },
   {
     path: '/photographs',
     name: 'Photographs',
-    component: Photographs,
+    component: () =>
+      import(
+        /* webpackChunkName: "photographs" */ '../views/Photographs.vue'
+      ),
     props: true,
+    meta: {
+      title: 'Фотографы',
+    },
   },
   {
     path: '/photographs/:photograph',
     name: 'Photograph',
-    component: Photograph,
+    component: () =>
+      import(
+        /* webpackChunkName: "photograph" */ '../views/Photograph.vue'
+      ),
     props: true,
+    meta: {
+      title: 'Фотограф',
+    },
   },
   {
     path: '/photographs/:photograph/albums',
-    component: Albums,
+    component: () =>
+      import(/* webpackChunkName: "albums" */ '../views/Albums.vue'),
     name: 'Albums',
     props: true,
+    meta: {
+      title: 'Альбомы',
+    },
   },
   {
     path: '/photographs/:photograph/albums/:albumId/photos',
     name: 'Photos',
     props: true,
-    component: Photos,
+    component: () =>
+      import(/* webpackChunkName: "photos" */ '../views/Photos.vue'),
+    meta: {
+      title: 'Фотографии',
+    },
   },
 ];
 

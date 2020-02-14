@@ -18,9 +18,19 @@ const api = setup({
   },
 });
 import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min';
 
 Vue.prototype.$http = api;
 Vue.config.productionTip = false;
+
+/* Directive for initialization sidebar
+ * @see https://materializecss.com/sidenav.html#initialization
+ */
+Vue.directive('sidenav', {
+  bind(el) {
+    M.Sidenav.init(el);
+  },
+});
 
 new Vue({
   router,

@@ -5,7 +5,7 @@
       v-for="photo in photos"
       :key="photo.id"
     >
-      <div class="card hoverable z-depth-4 card-panel">
+      <div class="card hoverable z-depth-4">
         <div class="card-image">
           <img :src="photo.thumbnailUrl" :alt="photo.title" />
           <span class="card-title">{{ photo.title }}</span>

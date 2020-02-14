@@ -1,37 +1,17 @@
 <template>
   <div id="app">
-    <header>
-      <nav class="teal accent-4">
-        <div class="container">
-          <div class="nav-wrapper ">
-            <a href="/" class="brand-logo">Vue Test-case</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <router-link
-                to="/photographs"
-                active-class="active"
-                exact
-                tag="li"
-              >
-                <a>Фотографы</a>
-              </router-link>
-              <router-link
-                to="/about"
-                active-class="active"
-                exact
-                tag="li"
-              >
-                <a>О себе</a>
-              </router-link>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <header class="navbar-fixed">
+      <Navbar :links="routes" />
     </header>
+    <DrawerMenu :links="routes" />
     <router-view />
   </div>
 </template>
 
 <style lang="scss">
+.mt-2 {
+  margin-top: 2rem;
+}
 #nav {
   a {
     font-weight: bold;
@@ -45,5 +25,40 @@
 </style>
 
 <script>
-export default {};
+import DrawerMenu from './components/Header/DrawerMenu';
+import Navbar from './components/Header/Navbar';
+export default {
+  components: {
+    DrawerMenu,
+    Navbar,
+  },
+  data: () => ({
+    routes: [
+      {
+        path: '/',
+        name: 'Home',
+        meta: {
+          title: 'Главная',
+          icon: 'home',
+        },
+      },
+      {
+        path: 'about',
+        name: 'About',
+        meta: {
+          title: 'О себе',
+          icon: 'face',
+        },
+      },
+      {
+        path: 'photographs',
+        name: 'Photographs',
+        meta: {
+          title: 'Фотографы',
+          icon: 'group',
+        },
+      },
+    ],
+  }),
+};
 </script>

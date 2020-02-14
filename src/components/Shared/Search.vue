@@ -1,12 +1,12 @@
 <template>
-  <nav class="teal accent-3">
+  <nav class="teal darken-3">
     <div class="nav-wrapper">
       <div class="input-field">
         <input
           id="search"
           type="search"
           v-model="searchValue"
-          placeholder="Введите название фотографии"
+          :placeholder="placeholder"
         />
         <label class="label-icon" for="search">
           <i class="material-icons">search</i>
@@ -22,6 +22,10 @@ export default {
   name: 'Search',
   props: {
     search: {
+      type: String,
+      required: true,
+    },
+    placeholder: {
       type: String,
       required: true,
     },

@@ -13,10 +13,10 @@
           }"
           exact
         >
-          <div class="card blue-grey darken-1">
+          <div class="card card-panel blue-grey darken-1 hoverable z-depth-3">
             <div class="card-content white-text">
               <span class="card-title">{{ photograph.name }}</span>
-              <span>{{ photograph.username }}</span>
+              <span>@{{ photograph.username }}</span>
             </div>
           </div>
         </router-link>

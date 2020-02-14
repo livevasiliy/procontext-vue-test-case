@@ -1,14 +1,19 @@
 <template>
   <div>
     <div id="photos" v-if="!loading">
-      <Search :search="search" @input="search = $event" />
+      <Search
+        placeholder="Введите название фотографии"
+        :search="search"
+        @input="search = $event"
+      />
       <div class="row" v-if="filteredPhotos.length > 0">
         <Photo :photos="filteredPhotos" />
-        <div class="col s12 m6 l6 xl6">
+        <div class="col s12 m12 l12 xl12 center">
           <button
             class="btn waves-effect waves-light offset-s6 offset-m6 offset-l6"
             @click="showMore(start)"
             v-if="filteredPhotos.length < 50"
+            :disabled="loading"
           >
             Показать ещё
           </button>

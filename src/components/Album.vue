@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Search :search="search" @input="search = $event" />
+    <Search
+      placeholder="Введите название альбома"
+      :search="search"
+      @input="search = $event"
+    />
     <div class="row">
       <div
         class="col s12 m6"
@@ -17,7 +21,7 @@
                 name: 'Photos',
                 params: { albumId: album.id },
               }"
-              >Фото
+              >Перейти в альбом
             </router-link>
           </div>
         </div>
