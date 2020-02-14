@@ -1,24 +1,39 @@
-# vue-test-case
+# procontext-vue-test-case
 
-## Project setup
+## Задача:
+
+Вывести список фотографов.
+После выбора фотографа на экране появяется список альбомов.
+Текущий выбранный фотограф и альбом выделены цветом. Также выделять элементы цветом при наведении.
+
+### Дополнительные задачи:
+1) Реализовать быстрый текстовый фильтр по имени альбома;
+2) Адекватно отображать данные на мобильных платформах;
+3) Кэшировать списки альбомов и фотографий;
+4) Отображать при клике по альбому только первые 10 изображений. Сделать кнопку "ещё", по клику по которой отображать ещё 10, если уже показываются все.
+
+#### REST для получения данных:
+фотографов - https://jsonplaceholder.typicode.com/users <br/>
+альбомы - https://jsonplaceholder.typicode.com/albums?userId=user_id<br/>
+фотографии - https://jsonplaceholder.typicode.com/photos?albumId=album_id<br/>
+
+## Установка проекта
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Запуск dev сервера
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Запуск сборки для prod
 ```
 yarn build
 ```
 
-### Lints and fixes files
+### Исправление ошибок
 ```
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
