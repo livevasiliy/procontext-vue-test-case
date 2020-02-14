@@ -7,7 +7,11 @@
       <h1 class="center-align">🎉 Добро пожаловать ! 🥳</h1>
       <h2 class="center-align">На решение этого test-case</h2>
       <h3 class="center-align">
-        <a href="https://github.com/">Это решение на GitHub</a>
+        <a
+          href="https://github.com/livevasiliy/procontext-vue-test-case"
+        >
+          Это решение на GitHub
+        </a>
       </h3>
     </div>
   </div>
