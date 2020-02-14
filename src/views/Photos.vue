@@ -21,9 +21,7 @@
       </div>
     </div>
     <div v-else class="valign-wrapper">
-      <h5 class="center-block">
-        Фотографии отстуствуют в этом альбоме
-      </h5>
+      <PreLoader />
     </div>
   </div>
 </template>
@@ -31,6 +29,7 @@
 <script>
 import Photo from '../components/Photo';
 import Search from '../components/Shared/Search';
+import PreLoader from '../components/Shared/PreLoader';
 
 export default {
   name: 'Photos',
@@ -58,6 +57,7 @@ export default {
   components: {
     Photo,
     Search,
+    PreLoader,
   },
   methods: {
     showMore(start) {
