@@ -6,6 +6,7 @@
 <script>
 import PhotographCard from '../components/PhotographCard';
 import PreLoader from '../components/Shared/PreLoader';
+
 export default {
   name: 'Photographs',
   data: () => ({
@@ -14,8 +15,8 @@ export default {
   }),
   mounted() {
     this.loading = true;
-    this.$http('/users').then(async response => {
-      this.photographs = await response.data;
+    this.$http('/users').then(response => {
+      this.photographs = response.data;
       this.loading = false;
     });
   },

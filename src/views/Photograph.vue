@@ -8,6 +8,7 @@
 <script>
 import PhotographDetail from '../components/PhotographDetail';
 import PreLoader from '../components/Shared/PreLoader';
+
 export default {
   name: 'Photograph',
   components: {
@@ -26,8 +27,8 @@ export default {
           id: this.$route.params.photograph,
         },
       })
-      .then(async response => {
-        this.photograph = await { ...response.data[0] };
+      .then(response => {
+        this.photograph = { ...response.data[0] };
         this.loading = false;
       });
   },

@@ -8,6 +8,7 @@
 <script>
 import Album from '../components/Album';
 import PreLoader from '../components/Shared/PreLoader';
+
 export default {
   name: 'Albums',
   data: () => ({
@@ -22,8 +23,8 @@ export default {
           userId: this.$route.params.id,
         },
       })
-      .then(async response => {
-        this.albums = await response.data;
+      .then(response => {
+        this.albums = response.data;
         this.loading = false;
       });
   },

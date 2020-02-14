@@ -53,8 +53,8 @@ export default {
           _limit: 10,
         },
       })
-      .then(async response => {
-        this.photos = await response.data;
+      .then(response => {
+        this.photos = response.data;
         this.start += 10;
         this.loading = false;
       });
@@ -77,8 +77,8 @@ export default {
               _limit: 10,
             },
           })
-          .then(async response => {
-            await this.photos.push(...response.data);
+          .then(response => {
+            this.photos.push(...response.data);
             this.loading = false;
           });
       }
