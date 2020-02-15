@@ -79,16 +79,25 @@
         <h4 class="center">Я в соц.сетях:</h4>
         <ul class="collection center">
           <li class="collection-item">
-            <a href="https://vk.com/livevasiliy">ВКонтакте</a>
-          </li>
-          <li class="collection-item">
-            <a href="https://instagram.com/livevasiliy">Инста</a>
+            <a href="https://vk.com/livevasiliy" target="_blank">
+              ВКонтакте
+            </a>
           </li>
           <li class="collection-item">
             <a
-              href="https://spb.hh.ru/resume/d649a939ff05878a860039ed1f73504745434f"
-              >Резюме на HH.ru</a
+              href="https://instagram.com/livevasiliy"
+              target="_blank"
             >
+              Инста
+            </a>
+          </li>
+          <li class="collection-item">
+            <a
+              target="_blank"
+              href="https://spb.hh.ru/resume/d649a939ff05878a860039ed1f73504745434f"
+            >
+              Резюме на HH.ru
+            </a>
           </li>
         </ul>
       </div>
